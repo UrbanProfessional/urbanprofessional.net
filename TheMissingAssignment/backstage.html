@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Backstage</title>
+    <link rel="stylesheet" href="styles.css">
+    <script src="script.js"></script>
+</head>
+<body onload="setTimeout(seq21Start, 5000)">
+    <div id="stage">
+        <img onclick="lightSwitch()" class="interact" id="light" src="img/off.png" alt="Lightswitch">
+        <div onclick="seq24Start()" class="interact" id="blood"></div>
+        <img id="keyF" src="img/key.png" alt="Key">
+        <div onclick="key()" class="interact" id="keyFV"></div>
+        <img id="arrow1" src="img/arrow.png" alt="arrow">
+        <img id="arrow2" src="img/arrow.png" alt="arrow">
+        <img id="arrow3" src="img/arrow.png" alt="arrow">
+        <div id="trim">
+            <img src="img/monsteranim.gif" id="monster" alt="Null">
+        </div>
+        <div id="trim2">
+            <img src="img/dave.jpg" id="dave" alt="Null">
+        </div>
+        <img src="img/dave2stare.png" id="monsterScare" alt="Null">
+        <img src="img/blood.png" id="blood1" alt="Null">
+        <img src="img/blood.png" id="blood2" alt="Null">
+        <img src="img/blood.png" id="blood3" alt="Null">
+        <img src="img/blood.png" id="blood4" alt="Null">
+    </div>
+    <div id="hud">
+        <button onclick="location.href='over.html'" id="suicide">Suicide</button>
+        <button onclick="seq29Start()" id="back">Back</button>
+        <div id="countdown"></div>
+        <img src="img/paperclip.png" id="paperclip" alt="Null">
+        <img src="img/crowbar.png" id="crowbar" alt="Null">
+        <div id="key"></div>
+        <img src="img/keyitem.png" id="keyV" alt="Null">
+    </div>
+    <div onclick="mainClick()" id="chatbox">
+        <p id="chatboxinner"></p>
+        <p onclick="yes2()" id="yes">yes</p>
+        <p onclick="no2()" id="no">no</p></P>
+        <p id="click">Click ↓</p>
+    </div>
+    <div id="darkness"></div>
+    <div id="darkness2">
+    </div>
+    <img id = "static" src="img/static.gif" alt="Null">
+    <!-- Audio -->
+    <audio loop src="audio/clock.mp3" id="clock"></audio>
+    <audio src="audio/pistol.mp3" id="gunshot"></audio>
+    <audio src="audio/pistol.mp3" id="gunshot2"></audio>
+    <audio src="audio/item.mp3" id="equipKey"></audio>
+    <audio src="audio/jumpscare.mp3" id="jumpscare"></audio>
+    <audio loop src="audio/menumusicreversed.mp3" id="song"></audio>
+    <audio src="audio/keydrop.mp3" id="sndKey"></audio>
+</body>
+</html>

@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Hallway</title>
+    <link rel="stylesheet" href="styles.css">
+    <script src="script.js"></script>
+</head>
+<body onload="seq3Start()">
+    <div id="hall">
+        <div onclick="seq4Start()" class="interact" id="bin"></div>
+        <div onclick="seq5Start()" class="interact" id="toLobby"></div>
+        <div onclick="seq6Start()" class="interact" id="bulletin"></div>
+        <div onclick="seq7Start()" class="interact" id="classroom1"></div>
+    </div>
+    <div id="hud">
+        <button onclick="location.href='over.html'" id="suicide">Suicide</button>
+        <button onclick="seq20Start()" id="back">Back</button>
+        <p id="floor">Floor 1</p>
+        <div onclick="mainClick()" id="chatbox">
+            <p id="chatboxinner"></p>
+            <p onclick="yes2()" id="yes">yes</p>
+            <p onclick="no2()" id="no">no</p></P>
+            <p id="click">Click ↓</p>
+        </div>
+        <img src="img/paperclip.png" id="paperclip" alt="Null">
+        <img src="img/crowbar.png" id="crowbar" alt="Null">
+        <div id="key"></div>
+        <img src="img/keyitem.png" id="keyV" alt="Null">
+    </div>
+    <!-- Audio -->
+    <audio src="audio/item.mp3" id="equipPaperclip"></audio>
+    <audio loop src="audio/hallwayambience.mp3" id="sndHall"></audio>
+</body>
+</html>

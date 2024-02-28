@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html id="menuHTML" lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Menu</title>
+    <link rel="stylesheet" href="styles.css">
+    <script src="script.js"></script>
+</head>
+<body id="menu">
+    <div id="warning">
+        <p id="wTitle">WARNING!</p>
+        <p id="wtext">Contains flashing lights and sudden sounds.<br><br>...<br></p>
+        <p id="wtext">Best Experienced with Headphones</p>
+        <img id="wImg" src="img/headphone.png" alt="Null">
+        <p onclick="rmWarn()" id="wButton">CONTINUE</p>
+    </div>
+    <div id="menuContent">
+        <h1 id="title" data-text="The Missing Assignment">
+            The Missing Assignment [DEMO]
+        </h1>
+        <div id="mB">
+            <p onclick="init()" id="bMenu">Start</p>
+            <p onclick="audio()" id="bMenu">Audio</p>
+            <p onclick="tutorial()" id="bMenu">Tutorial</p>
+            <p onclick="credits()" id="bMenu">Credits</p>
+        </div>
+        <img id = "static" src="img/static.gif" alt="Null">
+        <p id="version">Version 1.1.1</p>
+    </div>
+    <div id="ads">
+        <p>Advertisements</p>
+        <div id="ad1">
+            <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-9423886682841642"
+     crossorigin="anonymous"></script>
+        </div>
+        <div id="ad2">
+            <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-9423886682841642"
+     crossorigin="anonymous"></script>
+        </div>
+    </div>
+    <!-- Audio -->
+    <audio loop id="music" src="audio/menumusic.mp3"></audio>
+    <audio src="audio/pistol.mp3" id="gunshot"></audio>
+
+    <!-- Pop-Up Menus -->
+    <div id="tutorial">
+        <p id="tutorialT">Tutorial</p>
+        <p id="tutorialH">Abstract</p>
+        <p>'The Missing Assignment' is a web visual novel horror game that uses one's 
+            interactivity of a webpage as its form of gameplay. It uses the real life location of
+            the Brooklyn Technical High School in New York City as its setting. There are no parallels
+            to the real world besides that fact.</p>
+        <p id="tutorialH">How to play</p>
+        <p>-Find hidden items strewn across the scenes by hovering over them with your cursor</p>
+        <p>-Based on the size of your screen you may need to scroll more or less</p>
+        <p>-Use the scroll wheel to view a whole scene, items may be off screen from the starting view</p>
+        <p>-Click the 'Suicide' Button to Restart and the 'Back' Button to return to the last scene</p>
+        <p id="tutorialH">Gameplay</p>
+        <p>-For the best and least frustrating experience please allow audio and video on this webpage</p>
+        <p>-There are very obvious ways to cheat in this game, being a singeplayer game, nothing is stopping you</p>
+        <p>-Some elements may break on very peculiar resolutions and aspects</p>
+        <p onclick="tutorialClose()" id="tutorialB">Close</p>
+    </div>
+    <div id="credits">
+        <p id="creditsT">The Missing Assignment</p>
+        <p id="creditsP">A Web Game by</p>
+        <p id="creditsN">Urban Professional</p>
+        <p id="creditsL">-</p>
+        <p id="creditsF">Special thanks to the members of the Theories Discord server and ZaRamen on Git for testing and assistance!</p>
+        <p onclick="creditsClose()" id="creditsB">Close</p>
+    </div>
+    <div id="audio">
+        <p id="audioT">Audio Tests</p>
+        <p>A gunshot sound effect will play in</p>
+        <p onclick="audio()" id="audioC">...</p>
+        <p>Did you hear it? 
+        <p>Click the button below to do an ambience test</p>    
+        <p onclick="ambience()" id="audioC">Ambience Test</p>    
+        <p>If either test failed but the menu music is audible, then most likely your browser 
+        restricted it. Make sure that any automatic audio restriction for this page 
+        is turned off.</p>
+        <p>The option to change this setting may be anywhere in your browser. Usually you may find it at the top of your browser, you should see an option to enable audio 
+            on this page to play automatically.</p>
+        <p>Please enable said option. This game demo relies quite heavily on audio for cues and atmosphere.
+        </p>
+        <p onclick="audioClose()" id="audioB">Close</p>
+    </div>
+</body>
+</html>

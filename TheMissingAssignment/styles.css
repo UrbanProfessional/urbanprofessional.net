@@ -1,0 +1,1135 @@
+@import url('https://fonts.googleapis.com/css?family=Special+Elite');
+
+/* General CSS */
+#menuHTML {
+    height: 100%;
+    overflow: hidden;
+}
+
+body {
+    background-color: black;
+    margin: 0 0 0 0;
+}
+
+#menu {
+    display: grid;
+    height: 100%;
+}
+
+/* Floor Counter top of screen */
+#floor {
+    display: none;
+    color: rgb(212, 209, 206);
+    position: absolute;
+    font-family: 'Special Elite', monospace;
+    font-size: 150%;
+    font-weight: 900;
+    margin-left: 45%;
+    top: 5px;
+    margin-top: 0;
+} 
+
+/* Main Menu CSS - - - - - - - - - - - */
+#menuContent {
+    grid-column-start: 1;
+    grid-column-end: 3;
+}
+
+#warning {
+    position: fixed;
+    z-index: 2;
+    width: 100%;
+    height: 100%;
+    background-color: black;
+    left: 0;
+    top: 0;
+}
+
+#wTitle {
+    color: rgb(255, 0, 0);
+    font-family: 'Special Elite', monospace;
+    font-size: 250%;
+    text-align: center;
+}
+
+#wtext {
+    color: rgb(212, 209, 206);
+    text-align: center;
+    font-family: 'Special Elite', monospace;
+    font-size: 150%;
+}
+
+#wImg {
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    width: 10%;
+}
+
+#wButton {
+    color: rgb(212, 209, 206);
+    text-align: center;
+    font-family: 'Special Elite', monospace;
+    font-size: 150%;
+    margin-top: 100px;
+    text-decoration: underline;
+}
+
+#wButton:hover {
+    color: rgb(255, 0, 0);
+    cursor: pointer;
+}
+
+#menu {
+    background-image: url('img/school.jpg');
+    background-size: cover;
+    background-repeat: no-repeat;
+}
+
+#title, #bMenu {
+    color: rgb(212, 209, 206);
+    font-family: 'Special Elite', monospace;
+    position: relative;
+    font-size: xx-large;
+    margin-left: 10px;
+}
+
+#title {
+    z-index: 1;
+    font-size: 250%;
+}
+
+#bMenu {
+    z-index: 1;
+    font-size: 200%;
+    margin-right: 90%;
+    margin-top: 50px;
+    font-weight: bold;
+}
+
+#bMenu:hover {
+    color: darkred;
+    cursor: pointer;
+}
+
+
+#static {
+    position: fixed;
+    height: 100%;
+    width: 100%;
+    z-index: 0;
+    overflow: auto;
+    left: 0;
+    top: 0;
+    opacity: 0.1;
+
+}
+
+#version {
+    color: rgb(212, 209, 206);
+    font-family: 'Special Elite', monospace;
+    position: absolute;
+    font-size: 80%;
+    margin: 0;
+    bottom: 5px;
+    left: 10px;
+}
+
+#ads {
+    z-index: 1;
+    grid-column-start: 4;
+    grid-column-end: 5;
+    border: 5px solid rgb(0, 0, 0);
+    height: 100%;
+    width: 100%;
+    max-width: 300px;
+    background-color: rgb(10, 10, 10);
+    padding: 10px, 10px, 10px, 10px;
+}
+
+#ads p {
+    color: rgb(182, 179, 177);
+    font-family: 'Special Elite', monospace;
+    font-size: 100%;
+    text-align: center;
+}
+
+#tutorial {
+    border: 5px solid rgb(0, 0, 0);
+    overflow: scroll;
+    pointer-events: all;
+    display: none;
+    background-color: rgb(10, 10, 10);
+    border-radius: 5px;
+    height: 50%;
+    width: 40%;
+    margin: auto;
+    position: absolute;
+    top: 0px;
+    left: 0px;
+    right: 0px;
+    bottom: 0px;
+    color: rgb(212, 209, 206);
+    font-family: 'Special Elite', monospace;
+    font-size: 130%;
+    padding: 15px 15px 15px 15px;
+    z-index: 20;
+
+}
+
+#tutorialH {
+    text-align: center;
+    font-size: 150%;
+}
+
+#tutorialT {
+    text-align: center;
+    font-size: 300%;
+    margin-top: 0px;
+}
+
+#tutorialB {
+    margin-top: 100px;
+    font-size: 150%;
+    text-align: center;
+    text-decoration: underline;
+    margin-bottom: 0px;
+}
+#tutorialB:hover {
+    color: darkred;
+    cursor: pointer;
+}
+
+
+#credits {
+    border: 5px solid rgb(0, 0, 0);
+    overflow: scroll;
+    pointer-events: all;
+    display: none;
+    background-color: rgb(10, 10, 10);
+    border-radius: 5px;
+    height: 50%;
+    width: 40%;
+    margin: auto;
+    position: absolute;
+    top: 0px;
+    left: 0px;
+    right: 0px;
+    bottom: 0px;
+    color: rgb(212, 209, 206);
+    font-family: 'Special Elite', monospace;
+    font-size: 130%;
+    padding: 15px 15px 15px 15px;
+    z-index: 20;
+
+}
+
+#creditsT {
+    margin-top: 0;
+    text-align: center;
+    font-size: 200%;
+}
+#creditsP {
+    margin-top: 20px;
+    text-align: center;
+    font-size: 100%;
+    margin-bottom: 0;
+}
+#creditsN {
+    margin-top: 5px;
+    text-align: center;
+    font-size: 120%;
+}
+#creditsF {
+    margin-top: 50px;
+    text-align: center;
+    font-size: 100%;
+}
+#creditsB {
+    margin-top: 100px;
+    font-size: 150%;
+    text-align: center;
+    text-decoration: underline;
+    margin-bottom: 0px;
+}
+#creditsB:hover {
+    color: darkred;
+    cursor: pointer;
+}
+#creditsL {
+    text-align: center;
+    margin-top: 40px;
+}
+
+#audio {
+    text-align: center;
+    border: 5px solid rgb(0, 0, 0);
+    overflow: scroll;
+    pointer-events: all;
+    display: none;
+    background-color: rgb(10, 10, 10);
+    border-radius: 5px;
+    height: 50%;
+    width: 40%;
+    margin: auto;
+    position: absolute;
+    top: 0px;
+    left: 0px;
+    right: 0px;
+    bottom: 0px;
+    color: rgb(212, 209, 206);
+    font-family: 'Special Elite', monospace;
+    font-size: 130%;
+    padding: 15px 15px 15px 15px;
+    z-index: 20;
+
+}
+#audioB {
+    margin-top: 100px;
+    font-size: 150%;
+    text-align: center;
+    text-decoration: underline;
+    margin-bottom: 0px;
+}
+#audioB:hover {
+    color: darkred;
+    cursor: pointer;
+}
+#audioT {
+    text-align: center;
+    font-size: 300%;
+    margin-top: 0px;
+}
+#audioC {
+    font-size: 150%;
+    text-align: center;
+    text-decoration: underline;
+    margin-bottom: 0px;
+}
+#audioC:hover {
+    color: darkred;
+    cursor: pointer;
+}
+
+/* Game Pages CSS - - - - - - - -*/
+#hud {
+    pointer-events: none;
+    position: fixed;
+    z-index: 2;
+    width: 100%;
+    height: 100%;
+    left: 0;
+    top: 0;
+}
+
+#suicide {
+    pointer-events: all;
+    padding: 0.7% 0.5% 0.5% 0.5%;
+    color: rgb(105, 0, 0);
+    font-family: 'Special Elite', monospace;
+    font-size: 100%;
+    font-weight: bold;
+    margin: 10px 0px 0px 10px;
+}
+
+#suicide:hover {
+    background-color: rgb(255, 0, 0);
+    border-color: red;
+    cursor: pointer;
+}
+
+#back {
+    pointer-events: all;
+    position: absolute;
+
+    padding: 0.7% 0.5% 0.5% 0.5%;
+    color: rgb(105, 0, 0);
+    font-family: 'Special Elite', monospace;
+    font-size: 100%;
+    font-weight: bold;
+    top: 10px;
+    left: 110px;
+}
+
+#back:hover {
+    background-color: rgb(255, 0, 0);
+    border-color: red;
+    cursor: pointer;
+}
+
+#chatbox {
+    pointer-events: all;
+    display: none;
+    background-color: rgb(27, 27, 27);
+    border-radius: 30px;
+    height: 20%;
+    width: 50%;
+    margin-left: 25%;
+    margin-right: 25%;
+    position: fixed;
+    bottom: 10px;
+    color: rgb(212, 209, 206);
+    font-family: 'Special Elite', monospace;
+    font-size: 130%;
+    padding: 15px 15px 15px 15px;
+    z-index: 20;
+}
+
+#chatbox:hover {
+    background-color: rgb(14, 14, 14);
+    cursor: pointer;   
+}
+
+#click {
+    position: absolute;
+    bottom: 0%;
+    right: 15px;
+    margin: 0 0 0 0;
+    font-weight: bold;
+}
+
+#chatboxinner {
+    margin: 0 0 0 0;
+}
+
+#yes {
+    z-index: 3;
+    display: none;
+    margin-left: 30%;
+    margin-right: 40%;
+    margin-top: 0;
+    margin-bottom: 0;
+    position: absolute;
+    bottom: 0%;
+    color: rgb(150, 0, 0);
+}
+#yes:hover {
+    font-weight: bolder;
+    color: rgb(255, 0, 0);
+}
+
+#no {
+    z-index: 3;
+    display: none;
+    margin-left: 60%;
+    margin-right: 40%;
+    margin-top: 0;
+    margin-bottom: 0;
+    position: absolute;
+    bottom: 0%;
+    color: rgb(150, 0, 0);
+}
+#no:hover {
+    font-weight: bolder;
+    color: rgb(255, 0, 0);
+}
+
+#paperclip {
+    display: none;
+    position: absolute;
+    right: 20px;
+    top: 20px;
+    width: 40px;
+    height: 40px;
+    background-color: rgba(145, 0, 0, 0.501);
+    border-radius: 5px;
+    box-shadow: 0 0 5px 5px rgba(145, 0, 0, 0.501);
+}
+
+#crowbar {
+    display: none;
+    position: absolute;
+    right: 20px;
+    top: 80px;
+    width: 40px;
+    height: 40px;
+    background-color: rgba(145, 0, 0, 0.501);
+    border-radius: 5px;
+    box-shadow: 0 0 5px 5px rgba(145, 0, 0, 0.501);
+}
+
+#key {
+    display: none;
+    position: absolute;
+    right: 20px;
+    top: 140px;
+    width: 40px;
+    height: 40px;
+    background-color: rgba(145, 0, 0, 0.501);
+    border-radius: 5px;
+    box-shadow: 0 0 5px 5px rgba(145, 0, 0, 0.501);
+}
+
+#keyV {
+    display: none;
+    position: absolute;
+    right: 23px;
+    top: 148px;
+    width: 35px;
+    height: 28px;
+    transform: rotate(45deg);
+}
+/* Audio Test CSS */
+#chatboxA {
+    pointer-events: all;
+    display: block;
+    background-color: rgb(27, 27, 27);
+    border-radius: 30px;
+    height: 20%;
+    width: 50%;
+    margin-left: 25%;
+    margin-right: 25%;
+    position: fixed;
+    bottom: 10px;
+    color: rgb(212, 209, 206);
+    font-family: 'Special Elite', monospace;
+    font-size: 130%;
+    padding: 15px 15px 15px 15px;
+    z-index: 20;
+}
+#chatboxA:hover {
+    background-color: rgb(14, 14, 14);
+    cursor: pointer;   
+}
+
+#close {
+    position: absolute;
+    bottom: 0%;
+    right: 15px;
+    margin: 0 0 0 0;
+    font-weight: bold;
+}
+
+#chatboxinnerA {
+    margin: 0 0 0 0;
+}
+
+/* Start Page */
+#start {
+    background-image: url('img/start.jpg');
+    background-size: cover;
+    background-repeat: no-repeat;
+    width: 1920px;
+    height: 1468.8px;
+    margin: 0 0 0 0;
+    overflow: scroll;
+}
+
+/* Entrance Page */
+#entrance {
+    background-image: url('img/entrance.jpg');
+    border: 5px solid rgb(39, 0, 0);
+    background-size: contain;
+    background-repeat: no-repeat;
+    width: 1920px;
+    height: 1280px;
+    margin: 0 0 0 0;
+    overflow: scroll;
+}
+#mainentrance {
+    display: none;
+    position: relative;
+    margin: 820px 0 0 830px;
+    z-index: 3;
+    width: 250px;
+    height: 250px;
+    border-radius: 100px;
+}
+#mainentrance:hover {
+    background-color: rgba(177, 2, 2, 0.301);
+    box-shadow: 0 0 60px 60px rgb(177, 2, 2, 0.301);
+}
+
+/* Hall Page */
+#hall {
+    background-image: url('img/hall.jpg');
+    border: 5px solid rgb(39, 0, 0);
+    background-size: contain;
+    background-repeat: no-repeat;
+    width: 1920px;
+    height: 1438px;
+    margin: 0 0 0 0;
+}
+
+#bin {
+    z-index: 3;
+    display: none;
+    position: absolute;
+    margin: 880px 0 0 240px;
+    width: 150px;
+    height: 150px;
+    border-radius: 100px;
+}
+#bin:hover {
+    background-color: rgba(177, 2, 2, 0.301);
+    box-shadow: 0 0 20px 20px rgb(177, 2, 2, 0.301);
+}
+
+#toLobby {
+    z-index: 3;
+    display: none;
+    position: absolute;
+    margin: 490px 0 0 890px;
+    width: 120px;
+    height: 120px;
+    border-radius: 100px;
+}
+#toLobby:hover {
+    background-color: rgba(177, 2, 2, 0.301);
+    box-shadow: 0 0 30px 30px rgb(177, 2, 2, 0.301);
+}
+
+#bulletin {
+    z-index: 3;
+    display: none;
+    position: absolute;
+    margin: 340px 0 0 1400px;
+    width: 500px;
+    height: 350px;
+    border-radius: 200px;
+}
+#bulletin:hover {
+    background-color: rgba(177, 2, 2, 0.301);
+    box-shadow: 0 0 40px 40px rgb(177, 2, 2, 0.301);
+}
+
+#classroom1 {
+    z-index: 3;
+    display: none;
+    position: relative;
+    margin: 440px 0 0 1230px;
+    width: 50px;
+    height: 400px;
+    border-radius: 200px;
+}
+#classroom1:hover {
+    background-color: rgba(177, 2, 2, 0.301);
+    box-shadow: 0 0 20px 20px rgb(177, 2, 2, 0.301);
+}
+
+/* Lobby Page */
+
+#lobby {
+    background-image: url('img/lobby.jpg');
+    border: 5px solid rgb(39, 0, 0);
+    background-size: contain;
+    background-repeat: no-repeat;
+    width: 1920px;
+    height: 1440px;
+    margin: 0 0 0 0;
+}
+
+#audiDoor {
+    z-index: 3;
+    display: none;
+    position: absolute;
+    margin: 460px 0 0 945px;
+    width: 125px;
+    height: 260px;
+    border-radius: 100px;
+}
+#audiDoor:hover {
+    background-color: rgba(177, 2, 2, 0.301);
+    box-shadow: 0 0 30px 30px rgb(177, 2, 2, 0.301);
+}
+
+#staircase {
+    z-index: 3;
+    display: none;
+    position: absolute;
+    margin: 500px 0 0 -25px;
+    width: 120px;
+    height: 180px;
+    border-radius: 100px;
+}
+#staircase:hover {
+    background-color: rgba(177, 2, 2, 0.301);
+    box-shadow: 0 0 30px 30px rgb(177, 2, 2, 0.301);
+}
+
+#display {
+    z-index: 3;
+    display: none;
+    position: absolute;
+    margin: 515px 0 0 330px;
+    width: 400px;
+    height: 120px;
+    border-radius: 100px;
+}
+#display:hover {
+    background-color: rgba(177, 2, 2, 0.301);
+    box-shadow: 0 0 50px 50px rgb(177, 2, 2, 0.301);
+}
+
+
+#audiBoard {
+    z-index: 2;
+    display: none;
+    position: absolute;
+    top: 600px;
+    left: 960px;
+    height: 40px;
+    width: 130px;
+    transform: rotate(32deg)
+}
+
+#audiBoard2 {
+    z-index: 2;
+    display: none;
+    position: absolute;
+    top: 670px;
+    left: 980px;
+    height: 40px;
+    width: 118px;
+    transform: rotate(-20deg)
+}
+
+#audiBoard3 {
+    z-index: 2;
+    display: none;
+    position: absolute;
+    margin-top: 780px;
+    margin-left: 1100px;
+    height: 20px;
+    width: 120px;
+    transform: rotate(9deg)
+}
+
+#audiBoard4 {
+    z-index: 2;
+    display: none;
+    position: absolute;
+    margin-top: 780px;
+    margin-left: 1100px;
+    height: 25px;
+    width: 120px;
+    transform: rotate(-9deg)
+}
+
+/* Auditorium Page */
+#audi {
+    background-image: url('/img/auditorium.jpg');
+    border: 5px solid rgb(39, 0, 0);
+    background-size: cover;
+    background-repeat: no-repeat;
+    width: 1920px;
+    height: 1440px;
+    margin: 0 0 0 0;
+}
+
+#backstage {
+    z-index: 3;
+    display: block;
+    position: absolute;
+    margin-top: 470px;
+    margin-left: 625px;
+    width: 430px;
+    height: 130px;
+    border-radius: 200px;
+}
+#backstage:hover {
+    background-color: rgba(177, 2, 2, 0.301);
+    box-shadow: 0 0 70px 70px rgb(177, 2, 2, 0.301);
+}
+
+#exit1 {
+    z-index: 3;
+    display: block;
+    position: absolute;
+    margin-top: 600px;
+    margin-left: 30px;
+    width: 100px;
+    height: 100px;
+    border-radius: 200px;
+}
+#exit1:hover {
+    background-color: rgba(177, 2, 2, 0.301);
+    box-shadow: 0 0 30px 30px rgb(177, 2, 2, 0.301);
+}
+
+#exit2 {
+    z-index: 3;
+    display: block;
+    position: absolute;
+    margin-top: 580px;
+    margin-left: 1540px;
+    width: 100px;
+    height: 100px;
+    border-radius: 200px;
+}
+#exit2:hover {
+    background-color: rgba(177, 2, 2, 0.301);
+    box-shadow: 0 0 30px 30px rgb(177, 2, 2, 0.301);
+}
+
+/* Classroom CSS */
+#classroom {
+    background-image: url('img/classroom.jpg');
+    border: 5px solid rgb(39, 0, 0);
+    background-size: cover;
+    background-repeat: no-repeat;
+    width: 1920px;
+    height: 1730px;
+    margin: 0 0 0 0;
+}
+
+#locker1 {
+    z-index: 3;
+    display: none;
+    position: absolute;
+    margin-top: 300px;
+    margin-left: 810px;
+    width: 60px;
+    height: 200px;
+    border-radius: 200px;
+}
+#locker1:hover {
+    background-color: rgba(177, 2, 2, 0.301);
+    box-shadow: 0 0 20px 20px rgb(177, 2, 2, 0.301);
+}
+
+#locker2 {
+    z-index: 3;
+    display: none;
+    position: absolute;
+    margin-top: 530px;
+    margin-left: 1250px;
+    width: 60px;
+    height: 110px;
+    border-radius: 100px;
+}
+#locker2:hover {
+    background-color: rgba(177, 2, 2, 0.301);
+    box-shadow: 0 0 20px 20px rgb(177, 2, 2, 0.301);
+}
+
+#locker3 {
+    z-index: 3;
+    display: none;
+    position: absolute;
+    margin-top: 270px;
+    margin-left: 1630px;
+    width: 80px;
+    height: 240px;
+    border-radius: 200px;
+}
+#locker3:hover {
+    background-color: rgba(177, 2, 2, 0.301);
+    box-shadow: 0 0 20px 20px rgb(177, 2, 2, 0.301);
+}
+
+/* Backstage CSS */
+#stage {
+    background-image: url('img/backstage.jpg');
+    border: 5px solid rgb(39, 0, 0);
+    background-size: cover;
+    background-repeat: no-repeat;
+    width: 1920px;
+    height: 1280px;
+    margin: 0 0 0 0;
+}
+
+#light {
+    z-index: 2;
+    display: block;
+    position: absolute;
+    margin-top: 602px;
+    margin-left: 1838px;
+    height: 50px;
+    width: 44px;
+}
+#light:hover {
+    background-color: rgba(255, 253, 253, 0.301);
+    box-shadow: 0 0 20px 20px rgba(245, 245, 245, 0.301);
+    border-radius: 50px;
+}
+
+#darkness {
+    background-color: black;
+    width: 100%;
+    height: 100%;
+    left: 0;
+    top: 0;
+    position: fixed;
+    z-index: 1;
+}
+
+#darkness2 {
+    background-color: black;
+    width: 100%;
+    height: 100%;
+    left: 0;
+    top: 0;
+    position: fixed;
+    z-index: 10;
+    overflow: hidden;
+}
+
+#blood {
+    z-index: 3;
+    display: none;
+    position: absolute;
+    margin-top: 803px;
+    margin-left: 489px;
+    width: 188px;
+    height: 75px;
+    border-radius: 200px;
+}
+#blood:hover {
+    background-color: rgba(177, 2, 2, 0.301);
+    box-shadow: 0 0 20px 20px rgb(177, 2, 2, 0.301);
+}
+
+#keyFV {
+    z-index: 1;
+    display: none;
+    position: absolute;
+    margin-top: 971px;
+    margin-left: 1067px;
+    width: 63px;
+    height: 19px;
+    border-radius: 200px;
+}
+#keyFV:hover {
+    background-color: rgba(177, 2, 2, 0.301);
+    box-shadow: 0 0 10px 10px rgb(177, 2, 2, 0.301);
+}
+#keyF {
+    z-index: 0;
+    display: none;
+    position: absolute;
+    margin-top: 948px;
+    margin-left: 1054px;
+    width: 125px;
+    height: 63px;
+    border-radius: 200px;
+}
+
+#dave {
+    width: 38px;
+    height: 176px;
+}
+#trim2 {
+    overflow: hidden;
+    display: none;
+    z-index: 2;
+    position: absolute;
+    margin-top: 596px;
+    margin-left: 678px;
+    width: 38px;
+    height: 113px;   
+}
+#dave.stage2 {
+    width: 226px;
+    height: 113px;
+}
+#trim2.stage2 {
+    margin-top: 791px;
+    margin-left: 715px;
+    width: 226px;
+    height: 63px; 
+}
+
+#dave.stage3 {
+    width: 753px;
+    height: 439px;
+}
+#trim2.stage3 {
+    margin-top: 1067px;
+    margin-left: 226px;
+    width: 1129px;
+    height: 226px;   
+}
+
+#countdown {
+    display: none;
+    color: rgb(212, 209, 206);
+    font-family: 'Special Elite', monospace;
+    font-size: 300%;
+    position: fixed;
+    top: 20px;
+    margin-left: 45%;
+    margin-right: 50%;
+}
+
+#monster {
+    width: 627px;
+    height: 502px;
+}
+#trim {
+    overflow: hidden;
+    display: none;
+    z-index: 0;
+    position: absolute;
+    margin-top: 565px;
+    margin-left: 226px;
+    width: 1067px;
+    height: 653px;
+}
+
+#monster.stage2 {
+    width: 1067px;
+    height: 853px;
+}
+
+#trim.stage2 {
+    margin-top: 565px;
+    margin-left: 100px;
+    width: 1067px;
+    height: 653px;
+}
+
+#monster.stage3 {
+    width: 3765px;
+    height: 3012px;
+}
+
+#trim.stage3 {
+    margin-top: 226px;
+    margin-left: -2008px;
+    width: 3137px;
+    height: 1060px;
+}
+
+#monsterScare {
+    z-index: 0;
+    display: none;
+    position: fixed;
+    bottom: 0;
+    height: 100%;
+    margin-left: auto;
+    margin-right: auto;
+    left: 0;
+    right: 0;
+}
+
+#blood1 {
+    z-index: 0;
+    display: none;
+    position: fixed;
+    bottom: 0;
+    width: 1255px;
+    margin-left: auto;
+    margin-right: auto;
+    left: 0;
+    right: 0;
+}
+
+#blood2 {
+    z-index: 0;
+    display: none;
+    position: fixed;
+    bottom: 0;
+    width: 1255px;
+    left: -502px;
+    transform: rotate(68deg);
+}
+
+#blood3 {
+    z-index: 0;
+    display: none;
+    position: fixed;
+    bottom: 0;
+    width: 1255px;
+    right: -502px;
+    transform: rotate(-32deg);
+}
+
+#blood4 {
+    z-index: 0;
+    display: none;
+    position: fixed;
+    bottom: -125px;
+    width: 1255px;
+    right: 251;
+    transform: rotate(32deg);
+}
+
+/* Hinting Arrows CSS */
+#arrow1 {
+    display: none;
+    position: absolute;
+    opacity: 0.4;
+    margin-top: 715px;
+    margin-left: 287px;
+    width: 75px;
+    height: 38px;
+    transform: rotate(-10deg);
+}
+
+#arrow2 {
+    display: none;
+    position: absolute;
+    opacity: 0.8;
+    margin-top: 627px;
+    margin-left: 1042px;
+    width: 75px;
+    height: 38px;
+    transform: rotate(40deg);
+}
+
+#arrow3 {
+    display: none;
+    position: absolute;
+    opacity: 0.5;
+    margin-top: 904px;
+    margin-left: 1355px;
+    width: 75px;
+    height: 38px;
+    transform: rotate(160deg);
+}
+
+
+/* Game Over CSS - - - - - - - - - - */
+#over {
+    color: rgb(255, 0, 0);
+    font-family: 'Special Elite', monospace;
+    font-size: 250%;
+    text-align: center;
+}
+
+#oText {
+    color: rgb(212, 209, 206);
+    font-size: 80%;
+}
+
+#oButton {
+    color: rgb(212, 209, 206);
+    text-align: center;
+    font-family: 'Special Elite', monospace;
+    font-size: 100%;
+    margin-top: 100px;
+    text-decoration: underline;
+}
+
+#oButton:hover {
+    color: rgb(255, 0, 0);
+    cursor: pointer;
+}
+
+/* Game Win CSS */
+#win {
+    color: rgb(0, 255, 0);
+    font-family: 'Special Elite', monospace;
+    font-size: 250%;
+    text-align: center;
+}
+
+#winText {
+    color: rgb(212, 209, 206);
+    font-size: 80%;
+}
+
+#winButton {
+    color: rgb(212, 209, 206);
+    text-align: center;
+    font-family: 'Special Elite', monospace;
+    font-size: 100%;
+    margin-top: 100px;
+    text-decoration: underline;
+}
+
+#winButton:hover {
+    color: rgb(255, 0, 0);
+    cursor: pointer;
+}

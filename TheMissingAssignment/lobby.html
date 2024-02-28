@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Lobby</title>
+    <link rel="stylesheet" href="styles.css">
+    <script src="script.js"></script>
+</head>
+<body onload="seq8Start()">
+    <div id="lobby">
+        <img src="img/plank.png" id="audiBoard" alt="Null">
+        <img src="img/plank.png" id="audiBoard2" alt="Null">
+        <img src="img/plank.png" id="audiBoard3" alt="Null">
+        <img src="img/plank.png" id="audiBoard4" alt="Null">
+        <div onclick="seq9Start()" class="interact" id="audiDoor"></div>
+        <div onclick="seq10Start()" class="interact" id="display"></div>
+        <div onclick="seq11Start()" class="interact" id="staircase"></div>
+    </div>
+    <div id="hud">
+        <button onclick="location.href='over.html'" id="suicide">Suicide</button>
+        <button onclick="location.href='hall.html'" id="back">Back</button>
+        <p id="floor">Floor 1</p>
+        <div onclick="mainClick()" id="chatbox">
+            <p id="chatboxinner"></p>
+            <p onclick="yes2()" id="yes">yes</p>
+            <p onclick="no2()" id="no">no</p></P>
+            <p id="click">Click ↓</p>
+        </div>
+        <img src="img/paperclip.png" id="paperclip" alt="Null">
+        <img src="img/crowbar.png" id="crowbar" alt="Null">
+        <div id="key"></div>
+        <img src="img/keyitem.png" id="keyV" alt="Null">
+    </div>
+
+    <!-- Audio -->
+    <audio loop src="audio/lobbyambience.mp3" id="sndLobby"></audio>
+</body>
+</html>
