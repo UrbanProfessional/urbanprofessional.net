@@ -708,7 +708,7 @@ body {
 
 /* Auditorium Page */
 #audi {
-    background-image: url('/img/auditorium.jpg');
+    background-image: url('img/auditorium.jpg');
     border: 5px solid rgb(39, 0, 0);
     background-size: cover;
     background-repeat: no-repeat;
