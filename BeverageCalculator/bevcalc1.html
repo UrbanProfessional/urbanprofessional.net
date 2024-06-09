@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Beverage Calculator</title>
+</head>
+<body>
+    <h1>Beverage Calculator</h1>
+    <form id="bevForm">
+        <label for="numPeople">Number of People:</label>
+        <input type="number" id="numPeople" name="numPeople" required><br><br>
+        
+        <label for="duration">Duration of Hangout (hours):</label>
+        <input type="number" id="duration" name="duration" required><br><br>
+        
+        <label for="cannabis">Is Cannabis Being Consumed?</label>
+        <select id="cannabis" name="cannabis" required>
+            <option value="true">Yes</option>
+            <option value="false">No</option>
+        </select><br><br>
+        
+        <label for="backgroundBevs">Background Beverages Available:</label>
+        <input type="number" id="backgroundBevs" name="backgroundBevs" value="0" required><br><br>
+
+        <button type="button" onclick="calculateBeverages()">Calculate</button>
+    </form>
+    
+    <h2 id="result"></h2>
+
+    <script>
+        function calculateBeverages() {
+            const numPeople = parseInt(document.getElementById('numPeople').value);
+            const duration = parseInt(document.getElementById('duration').value);
+            const cannabis = document.getElementById('cannabis').value === 'true';
+            const backgroundBevs = parseInt(document.getElementById('backgroundBevs').value);
+
+            const consumptionRate = cannabis ? 3 : 2;
+            const totalBeveragesNeeded = (numPeople * (duration*0.5) * consumptionRate) - backgroundBevs;
+            const finalBeveragesNeeded = totalBeveragesNeeded > 0 ? totalBeveragesNeeded : 0;
+
+            document.getElementById('result').innerText = `Total Beverages Needed: ${finalBeveragesNeeded}`;
+        }
+    </script>
+</body>
+</html>
