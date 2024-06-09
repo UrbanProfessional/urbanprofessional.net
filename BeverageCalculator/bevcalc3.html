@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Beverage Calculator</title>
+    <!-- Include Chart.js library -->
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+</head>
+<body>
+    <h1>Beverage Calculator</h1>
+    <form id="bevForm">
+        <label for="numPeople">Number of People:</label>
+        <input type="number" id="numPeople" name="numPeople" required><br><br>
+        
+        <label for="duration">Duration of Hangout (hours):</label>
+        <input type="number" id="duration" name="duration" required><br><br>
+        
+        <label for="cannabis">Is Cannabis Being Consumed?</label>
+        <select id="cannabis" name="cannabis" required>
+            <option value="true">Yes</option>
+            <option value="false">No</option>
+        </select><br><br>
+        
+        <label for="backgroundBevs">Background Beverages Available:</label>
+        <input type="number" id="backgroundBevs" name="backgroundBevs" value="0" required><br><br>
+
+        <label for="refills">Refills Available?</label>
+        <select id="refills" name="refills" required>
+            <option value="true">Yes</option>
+            <option value="false">No</option>
+        </select><br><br>
+
+        <button type="button" onclick="calculateBeverages()">Calculate</button>
+    </form>
+    
+    <h2 id="result"></h2>
+
+    <!-- Add canvas element for the chart -->
+    <canvas id="beverageChart" width="400" height="400"></canvas>
+
+    <script>
+        function calculateBeverages() {
+            const numPeople = parseInt(document.getElementById('numPeople').value);
+            const duration = parseInt(document.getElementById('duration').value);
+            const cannabis = document.getElementById('cannabis').value === 'true';
+            const backgroundBevs = parseInt(document.getElementById('backgroundBevs').value);
+            const refills = document.getElementById('refills').value === 'true' ? 0.5 : 1; // If refills are available, consumption rate per hour halves
+            
+            const consumptionRate = cannabis ? 0.7 * refills : 0.5 * refills; // Adjust consumption rate based on cannabis consumption and refills
+            const totalBeveragesNeeded = Math.floor((numPeople * duration * consumptionRate) - backgroundBevs);
+            const finalBeveragesNeeded = totalBeveragesNeeded > 0 ? totalBeveragesNeeded : 0;
+
+            document.getElementById('result').innerText = `Total Beverages Needed: ${finalBeveragesNeeded}`;
+
+            // Create a bar chart
+            const ctx = document.getElementById('beverageChart').getContext('2d');
+            const myChart = new Chart(ctx, {
+                type: 'bar',
+                data: {
+                    labels: ['Total Beverages Needed'],
+                    datasets: [{
+                        label: 'Beverage Consumption',
+                        data: [finalBeveragesNeeded],
+                        backgroundColor: [
+                            'rgba(255, 99, 132, 0.2)',
+                        ],
+                        borderColor: [
+                            'rgba(255, 99, 132, 1)',
+                        ],
+                        borderWidth: 1
+                    }]
+                },
+                options: {
+                    scales: {
+                        yAxes: [{
+                            ticks: {
+                                beginAtZero: true
+                            }
+                        }]
+                    }
+                }
+            });
+        }
+    </script>
+</body>
+</html>
