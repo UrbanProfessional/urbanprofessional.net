@@ -47,7 +47,7 @@
             const backgroundBevs = parseInt(document.getElementById('backgroundBevs').value);
             const refills = document.getElementById('refills').value === 'true' ? 0.5 : 1; // If refills are available, consumption rate per hour halves
             
-            const consumptionRate = cannabis ? 0.7 * refills : 0.5 * refills; // Adjust consumption rate based on cannabis consumption and refills
+            const consumptionRate = cannabis ? (0.7 * refills) + 1 : (0.5 * refills) + 1; // Adjust consumption rate based on cannabis consumption and refills
             const totalBeveragesNeeded = Math.floor((numPeople * duration * consumptionRate) - backgroundBevs);
             const finalBeveragesNeeded = totalBeveragesNeeded > 0 ? totalBeveragesNeeded : 0;
 
